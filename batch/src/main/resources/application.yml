@@ -1,6 +1,6 @@
 server:
   servlet.context-path: /api/assembleia
-  port: 8080
+  port: 8081
 
 spring:
   application.name: assembleia-api
@@ -30,11 +30,9 @@ logging:
 management:
   endpoint:
     liquibase:
-      enabled: true
+      enabled: false
 
-api:
-  base: 'https://user-info.herokuapp.com'
-  cpf: '/users/{cpf}'
+
 
 
 
