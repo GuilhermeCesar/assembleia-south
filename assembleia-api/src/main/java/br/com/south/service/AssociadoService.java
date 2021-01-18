@@ -1,14 +1,14 @@
 package br.com.south.service;
 
+import br.com.south.core.entity.Associado;
+import br.com.south.core.repository.AssociadoRepository;
+import br.com.south.core.repository.AssociadoSpecification;
 import br.com.south.dto.AssociadoDTO;
 import br.com.south.dto.CadastrarAssociadoDTO;
 import br.com.south.dto.StatusCPFEnum;
-import br.com.south.entity.Associado;
 import br.com.south.exception.AssociadoException;
 import br.com.south.helper.MessageHelper;
 import br.com.south.integration.CpfIntegration;
-import br.com.south.repository.AssociadoRepository;
-import br.com.south.repository.AssociadoSpecification;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

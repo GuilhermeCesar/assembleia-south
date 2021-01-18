@@ -1,4 +1,4 @@
-package br.com.south.dto;
+package br.com.south.core.dto;
 
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -8,7 +8,7 @@ import lombok.*;
 @With
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonDeserialize(builder = CpfValidatorDTO.JacksonBuilder.class)
+@JsonDeserialize(builder = ContagemVotacaoDTO.JacksonBuilder.class)
 @Builder(builderClassName = "JacksonBuilder")
 @Getter
 public class ContagemVotacaoDTO {

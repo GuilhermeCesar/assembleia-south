@@ -1,12 +1,12 @@
 package br.com.south.service;
 
+import br.com.south.core.entity.Sessao;
+import br.com.south.core.repository.SessaoRepository;
+import br.com.south.core.repository.SessaoSpecification;
 import br.com.south.dto.CadastrarSessaoDTO;
 import br.com.south.dto.SessaoDTO;
-import br.com.south.entity.Sessao;
 import br.com.south.exception.SessaoException;
 import br.com.south.helper.MessageHelper;
-import br.com.south.repository.SessaoRepository;
-import br.com.south.repository.SessaoSpecification;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

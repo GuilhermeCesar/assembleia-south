@@ -1,6 +1,9 @@
-package br.com.south.entity;
+package br.com.south.core.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 

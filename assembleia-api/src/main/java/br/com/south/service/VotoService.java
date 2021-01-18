@@ -1,17 +1,17 @@
 package br.com.south.service;
 
-import br.com.south.dto.ContagemVotacaoDTO;
+import br.com.south.core.dto.ContagemVotacaoDTO;
+import br.com.south.core.entity.Associado;
+import br.com.south.core.entity.Sessao;
+import br.com.south.core.entity.Voto;
+import br.com.south.core.entity.VotoId;
+import br.com.south.core.repository.AssociadoRepository;
+import br.com.south.core.repository.SessaoRepository;
+import br.com.south.core.repository.VotoRepository;
 import br.com.south.dto.VotoDTO;
 import br.com.south.dto.VotoFinalizadoDTO;
-import br.com.south.entity.Associado;
-import br.com.south.entity.Sessao;
-import br.com.south.entity.Voto;
-import br.com.south.entity.VotoId;
 import br.com.south.exception.VotoException;
 import br.com.south.helper.MessageHelper;
-import br.com.south.repository.AssociadoRepository;
-import br.com.south.repository.SessaoRepository;
-import br.com.south.repository.VotoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -81,7 +81,7 @@ public class VotoService {
     }
 
     private VotoFinalizadoDTO contagemDeVotos(Sessao sessao) {
-        var votos = this.votoRepository.contaVotacao(sessao.getId());
+        final var votos = this.votoRepository.contaVotacao(sessao.getId());
 
         final var quantidadeSim = votos
                 .stream()

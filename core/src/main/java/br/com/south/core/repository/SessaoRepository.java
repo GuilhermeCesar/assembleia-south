@@ -1,6 +1,6 @@
-package br.com.south.repository;
+package br.com.south.core.repository;
 
-import br.com.south.entity.Sessao;
+import br.com.south.core.entity.Sessao;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.PagingAndSortingRepository;
 

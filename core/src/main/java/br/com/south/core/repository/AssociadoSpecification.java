@@ -1,6 +1,6 @@
-package br.com.south.repository;
+package br.com.south.core.repository;
 
-import br.com.south.entity.Associado;
+import br.com.south.core.entity.Associado;
 import lombok.Builder;
 import lombok.Value;
 import lombok.With;
@@ -30,8 +30,8 @@ public class AssociadoSpecification implements Specification<Associado> {
     public Predicate toPredicate(Root<Associado> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         List<Predicate> predcs = new ArrayList<>();
 
-        this.idAssociado.ifPresent(idAssociado -> predcs.add(criteriaBuilder.equal(root.get("id"), idAssociado)));
-        this.nome.ifPresent(nome -> predcs.add(criteriaBuilder.equal(root.get("nome"), nome)));
+        this.idAssociado.ifPresent(idAssoc -> predcs.add(criteriaBuilder.equal(root.get("id"), idAssoc)));
+        this.nome.ifPresent(n -> predcs.add(criteriaBuilder.equal(root.get("nome"), n)));
         this.cpf.ifPresent(cpf -> predcs.add(criteriaBuilder.equal(root.get("cpf"), cpf)));
 
         return criteriaBuilder.and(predcs.toArray(new Predicate[predcs.size()]));

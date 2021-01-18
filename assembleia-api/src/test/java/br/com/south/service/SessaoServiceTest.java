@@ -1,8 +1,8 @@
 package br.com.south.service;
 
+import br.com.south.core.repository.SessaoRepository;
 import br.com.south.exception.SessaoException;
 import br.com.south.helper.MessageHelper;
-import br.com.south.repository.SessaoRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

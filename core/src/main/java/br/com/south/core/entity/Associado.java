@@ -1,4 +1,4 @@
-package br.com.south.entity;
+package br.com.south.core.entity;
 
 
 import lombok.*;
