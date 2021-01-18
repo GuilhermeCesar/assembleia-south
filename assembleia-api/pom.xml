@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.south</groupId>
+		<artifactId>assembleia</artifactId>
+		<version>1.0.0</version>
+<!--		<relativePath>../</relativePath>-->
+		<!-- lookup parent from repository -->
+	</parent>
+	<artifactId>assembleia-api</artifactId>
+	<version>1.0.0</version>
+	<name>assembleia-api</name>
+	<description>Api de assembleias</description>
+
+	<organization>
+		<name>Guilherme César Medeiros</name>
+		<url>https://www.linkedin.com/in/guilherme-cesar-medeiros-2ba943b6/</url>
+	</organization>
+
+	<properties>
+		<java.version>15</java.version>
+		<spring-cloud.version>2020.0.0</spring-cloud.version>
+		<swagger.version>3.0.0</swagger.version>
+	</properties>
+
+	<dependencies>
+	</dependencies>
+
+
+	<build>
+		<finalName>assembleia-api</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
