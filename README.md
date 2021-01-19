@@ -27,6 +27,10 @@ cd docker && docker-compose up
 </li>
 <li>Rodar primeiro a api para depois rodar o batch</li>
 <li>Ambos com profile default</li>
+<li>
+O Batch roda a cada 1 minutos, caso necessário altere em 
+<a href="batch/src/main/java/br/com/south/batch/config/BatchExecutor.java"></a> 
+</li>
 
 
 <h3 align="left">Languages and Tools:</h3>

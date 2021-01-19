@@ -1,5 +1,6 @@
-package br.com.south.batch.config;
+package br.com.south.batch;
 
+import br.com.south.batch.config.AmqpConfig;
 import br.com.south.batch.dto.SessaoEncerradaDTO;
 import br.com.south.core.entity.Sessao;
 import br.com.south.core.repository.SessaoRepository;
