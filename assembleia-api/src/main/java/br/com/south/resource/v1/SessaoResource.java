@@ -3,8 +3,10 @@ package br.com.south.resource.v1;
 import br.com.south.config.SwaggerConfig;
 import br.com.south.core.dto.CadastrarSessaoDTO;
 import br.com.south.core.dto.SessaoDTO;
-import br.com.south.dto.*;
 import br.com.south.core.service.SessaoService;
+import br.com.south.dto.ErrorMessage;
+import br.com.south.dto.VotoDTO;
+import br.com.south.dto.VotoFinalizadoDTO;
 import br.com.south.service.VotoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -62,8 +64,9 @@ public class SessaoResource {
     })
     @ResponseStatus(OK)
     public Page<SessaoDTO> findBy(@RequestParam(value = "pauta", required = false) String pauta,
+                                  @RequestParam(value = "encerrada", required = false) Boolean encerrada,
                                   Pageable pageable) {
-        return this.sessaoService.buscarSessao(pauta, pageable);
+        return this.sessaoService.buscarSessao(pauta, encerrada, pageable);
     }
 
     @ApiOperation(value = "${api.sessao.votar}")

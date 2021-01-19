@@ -23,13 +23,14 @@
 		<java.version>15</java.version>
 		<spring-cloud.version>2020.0.0</spring-cloud.version>
 		<swagger.version>3.0.0</swagger.version>
+		<assembleia.core>1.0.0</assembleia.core>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>br.com.south</groupId>
 			<artifactId>core</artifactId>
-			<version>1.0.0</version>
+			<version>${assembleia.core}</version>
 		</dependency>
 
 		<dependency>
@@ -37,7 +38,6 @@
 			<artifactId>liquibase-core</artifactId>
 		</dependency>
 	</dependencies>
-
 
 	<build>
 		<finalName>assembleia-api</finalName>

@@ -21,12 +21,15 @@ public class SessaoSpecification implements Specification<Sessao> {
 
     @Builder.Default
     private transient Optional<String> pauta = Optional.empty();
+    @Builder.Default
+    private transient Optional<Boolean> encerrado = Optional.empty();
 
     @Override
     public Predicate toPredicate(Root<Sessao> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         List<Predicate> predcs = new ArrayList<>();
 
         this.pauta.ifPresent(p -> predcs.add(criteriaBuilder.equal(root.get("pauta"), p)));
+        this.pauta.ifPresent(encerrado -> predcs.add(criteriaBuilder.equal(root.get("encerrado"), encerrado)));
 
         return criteriaBuilder.and(predcs.toArray(new Predicate[predcs.size()]));
     }

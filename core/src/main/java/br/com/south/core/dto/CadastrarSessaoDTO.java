@@ -36,7 +36,7 @@ public class CadastrarSessaoDTO {
         LocalTime duracao;
 
         public JacksonBuilder() {
-            this.duracao = LocalTime.of(0, 1);
+            this.duracao = LocalTime.of(0,1, 0);
         }
 
         public JacksonBuilder inicio(String inicio) {

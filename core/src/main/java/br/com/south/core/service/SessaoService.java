@@ -13,8 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
+import static java.util.Optional.ofNullable;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
@@ -61,14 +60,19 @@ public class SessaoService {
         return getSessaoDTO(sessao);
     }
 
-    public Page<SessaoDTO> buscarSessao(String pauta, Pageable pageable) {
+    public Page<SessaoDTO> buscarSessao(String pauta, Boolean encerrada, Pageable pageable) {
         final var sessaoSpecification = SessaoSpecification
                 .builder()
-                .pauta(Optional.ofNullable(pauta))
+                .pauta(ofNullable(pauta))
+                .encerrado(ofNullable(encerrada))
                 .build();
 
         final var sessaoPage = this.sessaoRepository.findAll(sessaoSpecification, pageable);
 
         return sessaoPage.map(this::getSessaoDTO);
     }
+
+
+
+
 }

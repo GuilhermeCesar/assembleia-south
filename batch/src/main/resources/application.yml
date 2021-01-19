@@ -14,12 +14,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/assembleia
+    url: jdbc:mysql://localhost:3306/assembleia?allowPublicKeyRetrieval=true&sslMode=DISABLED
 
   rabbitmq:
     port: 5672
     username: admin
     password: admin
+    virtual-host: /
+    host: localhost
 
 logging:
   level:
@@ -31,6 +33,12 @@ management:
   endpoint:
     liquibase:
       enabled: false
+
+evento:
+  sessao:
+    exchange: 'sessao.fanout'
+    queue: 'sessao.queue'
+
 
 
 
