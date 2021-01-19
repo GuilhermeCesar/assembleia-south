@@ -1,7 +1,7 @@
 package br.com.south.resource.handle;
 
 import br.com.south.dto.ErrorMessage;
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.FieldError;
@@ -16,7 +16,7 @@ import javax.validation.ConstraintViolationException;
 import javax.xml.bind.ValidationException;
 import java.util.stream.Collectors;
 
-import static br.com.south.helper.MessageHelper.ErrorCode.ERROR_VALID_DATA;
+import static br.com.south.core.helper.MessageHelper.ErrorCode.ERROR_VALID_DATA;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 @Slf4j

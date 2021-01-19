@@ -1,8 +1,10 @@
 package br.com.south.resource.v1;
 
 import br.com.south.config.SwaggerConfig;
+import br.com.south.core.dto.CadastrarSessaoDTO;
+import br.com.south.core.dto.SessaoDTO;
 import br.com.south.dto.*;
-import br.com.south.service.SessaoService;
+import br.com.south.core.service.SessaoService;
 import br.com.south.service.VotoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

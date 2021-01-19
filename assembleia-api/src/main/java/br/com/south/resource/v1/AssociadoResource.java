@@ -4,7 +4,7 @@ import br.com.south.config.SwaggerConfig;
 import br.com.south.dto.AssociadoDTO;
 import br.com.south.dto.CadastrarAssociadoDTO;
 import br.com.south.dto.ErrorMessage;
-import br.com.south.dto.SessaoDTO;
+import br.com.south.core.dto.SessaoDTO;
 import br.com.south.service.AssociadoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,6 +1,6 @@
 package br.com.south.dto;
 
-import br.com.south.helper.LocalDateTimeSerializer;
+import br.com.south.core.helper.LocalDateTimeSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

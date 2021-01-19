@@ -1,8 +1,8 @@
-package br.com.south.dto;
+package br.com.south.core.dto;
 
 
-import br.com.south.helper.LocalDateTimeSerializer;
-import br.com.south.helper.LocalTimeSerializer;
+import br.com.south.core.helper.LocalDateTimeSerializer;
+import br.com.south.core.helper.LocalTimeSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -27,6 +27,7 @@ public class SessaoDTO {
     @ApiModelProperty(example = "10:10:10", value = "HH:mm:ss")
     LocalTime duracao;
     Long idSessao;
+    Boolean encerrada;
 
     @JsonPOJOBuilder(withPrefix = "")
     public static class JacksonBuilder {

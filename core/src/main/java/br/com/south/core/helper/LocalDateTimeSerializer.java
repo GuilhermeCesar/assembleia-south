@@ -1,6 +1,6 @@
-package br.com.south.helper;
+package br.com.south.core.helper;
 
-import br.com.south.exception.SerializerException;
+import br.com.south.core.exception.SerializerException;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -25,6 +25,5 @@ public class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
             log.error("Falha ao serializar a data", ex);
             throw new SerializerException(HttpStatus.BAD_REQUEST, "Falha ao serializar a data");
         }
-
     }
 }

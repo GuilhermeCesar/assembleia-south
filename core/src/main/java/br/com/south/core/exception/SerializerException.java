@@ -1,4 +1,4 @@
-package br.com.south.exception;
+package br.com.south.core.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

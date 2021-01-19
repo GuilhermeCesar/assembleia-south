@@ -30,3 +30,6 @@ CREATE TABLE assembleia.voto
 
 ALTER TABLE assembleia.voto ADD FOREIGN KEY ( associado_id ) REFERENCES  assembleia.associado ( id );
 ALTER TABLE assembleia.voto ADD FOREIGN KEY ( sessao_id )  REFERENCES  assembleia.sessao ( id );
+
+--changeset medeiros:4
+ALTER TABLE assembleia.sessao ADD encerrada BIT;

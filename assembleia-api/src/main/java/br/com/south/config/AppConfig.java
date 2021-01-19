@@ -1,7 +1,7 @@
 package br.com.south.config;
 
 import br.com.south.core.ModuloRepository;
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.MessageSource;

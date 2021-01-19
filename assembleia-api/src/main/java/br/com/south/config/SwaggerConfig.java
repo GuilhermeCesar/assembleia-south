@@ -1,6 +1,6 @@
 package br.com.south.config;
 
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.time.LocalTime;
 import java.util.function.Predicate;
 
-import static br.com.south.helper.MessageHelper.ErrorCode.*;
+import static br.com.south.core.helper.MessageHelper.ErrorCode.*;
 import static springfox.documentation.builders.RequestHandlerSelectors.any;
 import static springfox.documentation.spi.DocumentationType.SWAGGER_2;
 

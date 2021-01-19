@@ -1,7 +1,7 @@
 package br.com.south.resource.handle;
 
 import br.com.south.dto.ErrorMessage;
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 
-import static br.com.south.helper.MessageHelper.ErrorCode.ERROR_AUTHENTICATION;
+import static br.com.south.core.helper.MessageHelper.ErrorCode.ERROR_AUTHENTICATION;
 import static javax.servlet.http.HttpServletResponse.SC_UNAUTHORIZED;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 

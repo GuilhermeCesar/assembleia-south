@@ -1,7 +1,7 @@
-package br.com.south.dto;
+package br.com.south.core.dto;
 
 
-import br.com.south.helper.DateDeserializer;
+import br.com.south.core.helper.DateDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import io.swagger.annotations.ApiModel;

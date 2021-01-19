@@ -1,4 +1,4 @@
-package br.com.south.helper;
+package br.com.south.core.helper;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -7,7 +7,7 @@ import br.com.south.dto.AssociadoDTO;
 import br.com.south.dto.CadastrarAssociadoDTO;
 import br.com.south.dto.StatusCPFEnum;
 import br.com.south.exception.AssociadoException;
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import br.com.south.integration.CpfIntegration;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;

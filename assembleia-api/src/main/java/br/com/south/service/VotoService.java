@@ -11,14 +11,14 @@ import br.com.south.core.repository.VotoRepository;
 import br.com.south.dto.VotoDTO;
 import br.com.south.dto.VotoFinalizadoDTO;
 import br.com.south.exception.VotoException;
-import br.com.south.helper.MessageHelper;
+import br.com.south.core.helper.MessageHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-import static br.com.south.helper.MessageHelper.ErrorCode.*;
+import static br.com.south.core.helper.MessageHelper.ErrorCode.*;
 import static org.springframework.http.HttpStatus.*;
 
 @Slf4j
