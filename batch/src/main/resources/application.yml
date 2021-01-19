@@ -33,6 +33,8 @@ management:
   endpoint:
     liquibase:
       enabled: false
+batch:
+  cron: '0 0/1 * * * ?'
 
 evento:
   sessao:

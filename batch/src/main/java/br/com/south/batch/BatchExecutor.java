@@ -32,7 +32,7 @@ public class BatchExecutor {
     private final RabbitTemplate rabbitTemplate;
     private final SessaoService sessaoService;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "${batch.cron}")
     public void reportCurrentTime() {
         try{
             log.info("Rodou às {}", dateFormat.format(new Date()));
