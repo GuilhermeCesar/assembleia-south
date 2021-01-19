@@ -1,7 +1,7 @@
 <h2>Setup</h2>
 <li>Utilizar java 15</li>
 <li>Tenha o docker previamente instalado na sua máquina</li>
-<li>Você deve ter o mavem previamento instalado na sua máquina</li>
+<li>Você deve ter o mavem previamente instalado na sua máquina</li>
 
 <li> <a href="docker/docker-compose.yml">  Senhas dos bancos e rabbit estão no docker compose</a></li>
 <li>Windows sem o hyperv não irão funcionar em localhost, utilizar o IP da VM no arquivo <a href="assembleia-api/src/main/resources/application.yml">application para banco e mensageria</a></li>
@@ -25,7 +25,7 @@ cd docker && docker-compose up
 <li>
     <a>http://localhost:8080/api/assembleia/swagger-ui/index.html</a>
 </li>
-<li>Rodar primeiro a api para depois rodar o batch</li>
+<li>Rodar primeiro a API para depois rodar o batch</li>
 <li>Ambos com profile default</li>
 <li>
 O Batch roda a cada 1 minutos, caso necessário altere em 
