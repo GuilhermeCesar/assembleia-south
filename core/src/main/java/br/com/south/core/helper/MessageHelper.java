@@ -40,7 +40,6 @@ public class MessageHelper {
         SWAGGER_ORGANIZATION_URL("swagger.organization.url"),
         SWAGGER_EMAIL("swagger.email"),
         SWAGGER_NAME("swagger.name"),
-        SWAGGER_REFINANCING("swagger.refinancing"),
         SWAGGER_PLAN("swagger.plan"),
         SWAGGER_SESSAO("swagger.api.sessao"),
         SWAGGER_API_ASSOCIADO("swagger.api.associado"),
