@@ -9,6 +9,8 @@
 <code>
 cd docker && docker-compose up
 </code>
+<li>Caso você tenha já um volume do mesmo nome, ele não irá funcionar,
+você consegue validar com o comando <code>docker volume ls</code></li>
 
 <li>abrir no draw.io 
     <a href="https://drive.google.com/file/d/1he_W6Iim2sO9VlEE2qgSrvAjVIAE1-lj/view?usp=sharing">

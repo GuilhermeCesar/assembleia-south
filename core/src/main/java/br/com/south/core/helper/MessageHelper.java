@@ -48,6 +48,7 @@ public class MessageHelper {
         ERROR_ASSOCIADO_NAO_ENCONTRADO("error.associado.nao.encontrado"),
         ERROR_SESSAO_FINALIZADA("error.sessao.finalizada"),
         ERROR_ASSOCIADO_VOTOU_SESSAO("error.associado.votou.sessao"),
+        ERROR_SERIALIZER_DATA("error.serializer.data"),
         ERROR_VALID_DATA("error.valid.data");
 
         private final String messageKey;
