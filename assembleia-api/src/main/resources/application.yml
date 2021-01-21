@@ -24,7 +24,7 @@ spring:
 logging:
   level:
     org.springframework.data: ERROR
-    br.medeiros.guilherme.testesouth: DEBUG
+    br.medeiros.south: DEBUG
     org.hibernate: ERROR
 
 management:

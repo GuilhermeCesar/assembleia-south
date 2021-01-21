@@ -45,6 +45,7 @@ public class MessageHelper {
         SWAGGER_API_ASSOCIADO("swagger.api.associado"),
         ERROR_SESSAO_NAO_ENCONTRADA("error.sessao.nao.encontrada"),
         ERROR_CPF_INVALIDO("error.cpf.invalido"),
+        ERROR_SEARCH_CPF("error.search.cpf"),
         ERROR_ASSOCIADO_NAO_ENCONTRADO("error.associado.nao.encontrado"),
         ERROR_SESSAO_FINALIZADA("error.sessao.finalizada"),
         ERROR_ASSOCIADO_VOTOU_SESSAO("error.associado.votou.sessao"),

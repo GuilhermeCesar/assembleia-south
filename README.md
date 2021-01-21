@@ -4,13 +4,14 @@
 <li>Você deve ter o mavem previamente instalado na sua máquina</li>
 
 <li> <a href="docker/docker-compose.yml">  Senhas dos bancos e rabbit estão no docker compose</a></li>
+<li> O mysql as vezes demora um pouco para subir, até 8 minutos </li>
 <li>Windows sem o hyperv não irão funcionar em localhost, utilizar o IP da VM no arquivo <a href="assembleia-api/src/main/resources/application.yml">application para banco e mensageria</a></li>
 <li>Para rodar o banco e rabbit execute o seguinte comando na raiz do projeto</li>
 <code>
 cd docker && docker-compose up
 </code>
 <li>Caso você tenha já um volume do mesmo nome, ele não irá funcionar,
-você consegue validar com o comando <code>docker volume ls</code></li>
+você consegue validar com o comando <code>docker volume prune</code>, <label style="color: red">ele irá destruir todos os seus volumes</label></li>
 
 <li>abrir no draw.io 
     <a href="https://drive.google.com/file/d/1he_W6Iim2sO9VlEE2qgSrvAjVIAE1-lj/view?usp=sharing">

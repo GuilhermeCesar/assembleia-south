@@ -1,13 +1,13 @@
 package br.com.south.service;
 
 import br.com.south.core.entity.Associado;
+import br.com.south.core.helper.MessageHelper;
 import br.com.south.core.repository.AssociadoRepository;
 import br.com.south.core.repository.AssociadoSpecification;
 import br.com.south.dto.AssociadoDTO;
 import br.com.south.dto.CadastrarAssociadoDTO;
 import br.com.south.dto.StatusCPFEnum;
 import br.com.south.exception.AssociadoException;
-import br.com.south.core.helper.MessageHelper;
 import br.com.south.integration.CpfIntegration;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +18,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
+import static br.com.south.core.helper.MessageHelper.ErrorCode.ERROR_CPF_INVALIDO;
+import static br.com.south.core.helper.MessageHelper.ErrorCode.ERROR_SEARCH_CPF;
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -50,10 +54,13 @@ public class AssociadoService {
         try {
             final var cpfValidationDTO = this.cpfIntegration.buscarCpfElegivel(cadastrarAssociadoDTO.getCpf());
             if (cpfValidationDTO.getStatus().equals(StatusCPFEnum.UNABLE_TO_VOTE)) {
-                throw new AssociadoException(HttpStatus.NOT_FOUND, this.messageHelper.get(MessageHelper.ErrorCode.ERROR_CPF_INVALIDO));
+                log.error( this.messageHelper.get(ERROR_CPF_INVALIDO, cadastrarAssociadoDTO.getCpf()));
+                throw new AssociadoException(BAD_REQUEST,
+                        this.messageHelper.get(ERROR_CPF_INVALIDO, cadastrarAssociadoDTO.getCpf()));
             }
         } catch (FeignException.FeignClientException ex) {
-            throw new AssociadoException(HttpStatus.NOT_FOUND, this.messageHelper.get(MessageHelper.ErrorCode.ERROR_CPF_INVALIDO));
+            log.error( this.messageHelper.get(ERROR_CPF_INVALIDO, cadastrarAssociadoDTO.getCpf()), ex);
+            throw new AssociadoException(BAD_REQUEST, this.messageHelper.get(ERROR_CPF_INVALIDO, cadastrarAssociadoDTO.getCpf()));
         }
     }
 
